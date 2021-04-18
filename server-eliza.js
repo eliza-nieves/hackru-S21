@@ -1,6 +1,9 @@
 const express = require('express');
 const fetch = require('node-fetch');
 const app = express();
+
+app.set('port', process.env.PORT || 80);
+
 app.use(express.static('public')); /* this line tells Express to use the public folder as our static folder from which we can serve static files*/
 app.get('/', function(req, res){
   res.sendFile('C:/Users/Eli/Documents/rutgers stuff/code/hackru21/hackru/hackru-S21/index.html');
@@ -41,13 +44,6 @@ app.get('/assets/common/html/brandinfo.html', function(req, res){
 });
 
 
-
-
-
-
-
-
-
 app.get('/style.css', function(req, res){
   res.sendFile('C:/Users/Eli/Documents/rutgers stuff/code/hackru21/hackru/hackru-S21/style.css');
 });
@@ -60,6 +56,6 @@ app.get('/api', function(req, res) {
   .then(data => data.json())
   .then(data => res.json(data))
 });
-app.listen(3000, function(){
-  console.log("Listening on port 3000!")
+app.listen(app.get('port'), function(){
+  console.log("Listening on port " + app.get('port'))
 });
