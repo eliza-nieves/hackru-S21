@@ -2,6 +2,7 @@
 str = window.location.href;
 var res = str.split("brand=")[1].replace(/%20/g, " ").replace(/%27/g, "'");
 // window.prompt(res);
+var score = str.split("&score=")[1];
 
 var info = search(res);
 
