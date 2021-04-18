@@ -4,7 +4,7 @@ var submitWebsiteButton = document.getElementById("submit")
 submitWebsiteButton.addEventListener("click", function() {
   website = document.getElementById("website_textbox").value
   if(website==="") return
-  if(website.indexOf(".") !== -1) {
+  if(website.indexOf(".com") !== -1) {
     website = website.split(".com")[0]
     website = website.split(".").slice(-1)[0]
   }
