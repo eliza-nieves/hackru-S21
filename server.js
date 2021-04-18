@@ -13,7 +13,8 @@ app.get('/api', function(req, res) {
   var auth_token = '&token=e26c031fb362046e4232370c8cb5ae70';
   var req_company = req.query.q;
   fetch(api_base + 'q=' + req_company + auth_token)
-    .then(data => res.send(data));
+  .then(data => data.json())
+  .then(data => res.json(data))
 });
 app.listen(3000, function(){
   console.log("Listening on port 3000!")
