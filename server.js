@@ -1,5 +1,5 @@
 const express = require('express');
-const fetch = require('fetch');
+const fetch = require('node-fetch');
 const app = express();
 app.use(express.static('public')); /* this line tells Express to use the public folder as our static folder from which we can serve static files*/
 app.get('/', function(req, res){
