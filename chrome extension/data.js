@@ -1,15 +1,8 @@
-
-// before comparing strings, remove accents & diacritics & misc characters & make both lowercase
-function formatString(s) {
-	return s.replace(/&|'|\.|\s/g, "").toLowerCase();
-}
-
-// find match in database
 function search(n){
-	const name = formatString(n);
-	// window.prompt(name)
-	for(var i = 0; i < data.length; i++){
-		if(name === formatString(data[i].name.normalize('NFD').replace(/[\u0300-\u036f]/g, ""))){
+	var i;
+	const name = n.toString().toUpperCase();
+	for(i = 0; i < data.length; i++){
+		if(name.localeCompare(data[i].name.toUpperCase()) == 0){
 			console.log("got it! " + data[i].labor_score);
 			return data[i];
 		}
@@ -23,6 +16,7 @@ function search(n){
 	};
 	// Return it
 	return obj;
+	return;
 }
 
 
