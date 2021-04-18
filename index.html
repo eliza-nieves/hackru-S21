@@ -3,14 +3,26 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" conents="width=device-width, intitial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" contents="width=device-width, intitial-scale=1.0">
     <title>API</title>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="style.ss">
+<script>
+    
+var requestOptions = {
+  method: 'GET'
+};
+fetch('https://tf689y3hbj.execute-api.us-east-1.amazonaws.com/prod/authorization/search?q=visa&token=e26c031fb362046e4232370c8cb5ae70', requestOptions)
+    .then(response => response.text())
+    .then(data => console.log(data))
+    .catch(error => console.error(error));
 
+</script>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body></body>
+<body>
+
+    <div class="score-container">
+        <p class="environscore"></p>
+    </div>
+</body>
 </html>
