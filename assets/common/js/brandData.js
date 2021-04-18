@@ -4,7 +4,7 @@ var res = str.split("brand=")[1].replace(/%20/g, " ").replace(/%27/g, "'");
 // window.prompt(res);
 //var score = str.split("&score=")[1];
 
-var info = search(name);
+var info = search(res);
 
 if(info.enviro_info !== "No data for given company") {
   document.getElementById("query_warning").style.display = "none"

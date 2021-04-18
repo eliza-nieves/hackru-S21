@@ -97,12 +97,18 @@
 	<script src="../js/data.js"></script>
 	<script src="../js/brandData.js"></script>
   	<script>
-      var requestOptions = {
+
+		str = window.location.href;
+		var res = str.split("brand=")[1].replace(/%20/g, " ").replace(/%27/g, "'");
+		var call = '/api?q=' + res;
+		console.log("call is " + call);
+     
+		var requestOptions = {
           method: 'GET',
           mode: 'no-cors'
         };
         var score;
-        fetch('/api?q=visa', requestOptions)
+        fetch(call, requestOptions)
             .then(response => response.text())
             .then(data => {
 				//console.log(data);
