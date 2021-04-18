@@ -73,7 +73,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="../js/data.js"></script>
 	<script src="../js/brandData.js"></script>
-  <script>
+  	<script>
       var requestOptions = {
           method: 'GET',
           mode: 'no-cors'
@@ -81,13 +81,20 @@
         var score;
         fetch('/api?q=visa', requestOptions)
             .then(response => response.text())
-            .then(data => {console.log(data);
-              //  score = data.environment_score;
+            .then(data => {
+				//console.log(data);
                 var parsed = JSON.parse(data);
-            console.log(parsed[0].environment_score); 
-           // console.log(score);
-        })
+				score = parsed[0].environment_score;
+				console.log("score is " + score);
+
+				var node = document.createElement("p");
+				var textnode = document.createTextNode(parsed[0].environment_score);
+				node.appendChild(textnode);
+				document.getElementById("row1col1").appendChild(node);
+
+			})
             .catch(error => console.error(error));
+			
   </script>
   </body>
 

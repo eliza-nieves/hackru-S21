@@ -10,7 +10,7 @@ submitWebsiteButton.addEventListener("click", function() {
   }
     
       
-  window.open("assets/common/html/brandinfo.html?brand="+website+"&score="+score,"_self")
+  window.open("assets/common/html/brandinfo.html?brand="+website)
 })
 
 

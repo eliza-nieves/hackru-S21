@@ -3,12 +3,13 @@ const fetch = require('node-fetch');
 const app = express();
 app.use(express.static('public')); /* this line tells Express to use the public folder as our static folder from which we can serve static files*/
 app.get('/', function(req, res){
-  res.sendFile('C:/Users/Eli/Documents/rutgers stuff/code/hackru21/hackru/hackru-S21/index.html');
+  res.sendFile('C:/Users/Eli/Documents/rutgers stuff/code/hackru21/hackru/hackru-S21/assets/common/html/brandInfo.html');
 });
 app.get('/style.css', function(req, res){
   res.sendFile('C:/Users/Eli/Documents/rutgers stuff/code/hackru21/hackru/hackru-S21/style.css');
 });
 app.get('/api', function(req, res) {
+	console.log("here");
   var api_base = 'https://tf689y3hbj.execute-api.us-east-1.amazonaws.com/prod/authorization/search?';
   var auth_token = '&token=e26c031fb362046e4232370c8cb5ae70';
   var req_company = req.query.q;

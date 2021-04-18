@@ -10,7 +10,6 @@ function search(n){
 	// window.prompt(name)
 	for(var i = 0; i < data.length; i++){
 		if(name === formatString(data[i].name.normalize('NFD').replace(/[\u0300-\u036f]/g, ""))){
-			console.log("got it! " + data[i].labor_score);
 			return data[i];
 		}
 	}
