@@ -21,35 +21,38 @@
           <h1 id="brand_title" class="display-5 fw-bold pb-3"></h1>
           
           <h2 class="display-7 fw-bold p-3">Environmental, Social, and Governmental (ESG) Ratings</h2>
-          <table id="esg_table" class="table">
-            <thead>
-              <tr>
-                <th scope="col">ESG Value</th>
-                <th scope="col">Information</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td scope="row" id="row1col1">attr_explanation</td>
-                <td id="row1col2">Mark</td>
-              </tr>
-            </tbody>
-          </table>
-
-		<table id="esg_table" class="table">
-			<thead>
-				<tr>
-					<th scope="col">Labor Score</th>
-					<th scope="col">Information</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td scope="row" id="row2col1">attr_explanation</td>
-					<td id="row2col2">Mark</td>
-				</tr>
-			</tbody>
-		</table>
+          <div class="my-lg-3">
+            <table id="esg_table" class="table table-light border shadow">
+              <thead>
+                <tr>
+                  <th scope="col">ESG Value</th>
+                  <th scope="col">Information</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="brand-score col-3" scope="row" id="row1col1">attributeScore</td>
+                  <td id="row1col2" class="col-8">attributeInformation</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="my-lg-3">
+            <table id="labor_table" class="table table-light border shadow">
+              <thead>
+                <tr>
+                  <th scope="col">Labor Score</th>
+                  <th scope="col">Information</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="brand-score col-3" scope="row" id="row2col1">attributeScore</td>
+                  <td id="row2col2" class="col-8">attributeInformation</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     
