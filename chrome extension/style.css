@@ -1,0 +1,16 @@
+body {
+    width: 500px; /* your desired width */
+    height: 300px;
+    position: relative;
+    vertical-align: middle;
+}
+
+h1 {
+    text-align: center;
+}
+
+table {
+    width: 500px;
+    padding: 10px 50px;
+    text-align: center;
+}
