@@ -3,7 +3,7 @@ const fetch = require('node-fetch');
 const app = express();
 app.use(express.static('public')); /* this line tells Express to use the public folder as our static folder from which we can serve static files*/
 app.get('/', function(req, res){
-  res.sendFile('C:/Users/Ashley/Documents/GitHub/hackru-S21/index.html');
+  res.sendFile('C:/Users/Ashley/Documents/GitHub/hackru-S21/assets/common/html/brandinfo.html');
 });
 app.get('/style.css', function(req, res){
   res.sendFile('C:/Users/Ashley/Documents/GitHub/hackru-S21/style.css');
