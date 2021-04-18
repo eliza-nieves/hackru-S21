@@ -4,11 +4,12 @@ var res = str.split("brand=")[1].replace(/%20/g, " ").replace(/%27/g, "'");
 // window.prompt(res);
 //var score = str.split("&score=")[1];
 
-var info = search(res);
+var info = search(name);
 
 if(info.enviro_info !== "No data for given company") {
   document.getElementById("query_warning").style.display = "none"
 }
+
 
 $("#brand_title").text(info.name);
 
